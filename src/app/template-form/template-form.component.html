@@ -1,0 +1,11 @@
+<p>template-form works!</p>
+
+<form #loginForm="ngForm" (ngSubmit)="userlogin()">
+    <input type="text"  required #name="ngModel" name="user" placeholder="enter text here" pattern="[a-zA-Z]+$" minlength="3" ngModel><br>
+    <span *ngIf="name.invalid && name.touched" style="color: red;">enter valid details</span><br>
+    <input type="password" required #password="ngModel" name="password" placeholder="enter text here" ngModel><br>
+    <span *ngIf="password.invalid && password.touched" style="color: red;">enter valid details</span><br>
+    <input type="email" required #email="ngModel" name="email" placeholder="enter text here" ngModel><br>
+    <span *ngIf="email.invalid && email.touched" style="color: red;">enter valid details</span><br>
+    <button [disabled]="loginForm.invalid">submit</button>
+</form>
