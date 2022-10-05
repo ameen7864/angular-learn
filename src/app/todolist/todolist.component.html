@@ -1,6 +1,7 @@
 <h1>Todo list</h1>
 <input type="text" placeholder="enter todo" name="text" #todo><br>
 <button (click)="todoVal(todo.value)">add</button>
-<ul *ngFor="let item of list">
-    <h3>{{item.id}}-{{item.name}} <button (click)="remove(item.id)">X</button></h3>
+<ul *ngFor="let apple of item">
+    <h3>{{apple.id}}-{{apple.name}} <button (click)="remove(item.id)">X</button></h3>
 </ul>
+<h1>{{title | uppercase}}</h1>

@@ -18,7 +18,9 @@ export class TodolistComponent implements OnInit {
     
   }
   remove(id:number){
-    this.list=this.list.filter(val=>val.id==id)
+    this.list=this.list.filter(val=>val.id!==id)
   }
 
 }
+
+
